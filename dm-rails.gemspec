@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version          = DataMapper::Rails::VERSION
   spec.authors          = [ 'Martin Gamsjaeger (snusnu)', 'Dan Kubb' ]
   spec.email            = [ 'gamsnjaga@gmail.com' ]
-  spec.summary          = "Integrate DataMapper with Rails 3..5"
+  spec.summary          = "Integrate DataMapper with Rails 6"
   spec.description      = spec.summary
   spec.homepage         = "http://datamapper.org"
 
@@ -18,9 +18,9 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = [ "lib" ]
 
-  spec.add_runtime_dependency('dm-active_model', '~> 1.2', '>= 1.2.0')
-  spec.add_runtime_dependency('actionpack',      '>= 3.0', '< 6.0')
-  spec.add_runtime_dependency('railties',        '>= 3.0', '< 6.0')
+  spec.add_runtime_dependency('dm-active_model', '~> 1.3', '>= 1.3.0')
+  spec.add_runtime_dependency('actionpack',      '>= 6.0', '< 7.0')
+  spec.add_runtime_dependency('railties',        '>= 6.0', '< 7.0')
 
   spec.add_development_dependency('rake', '~> 0.9.2')
   spec.add_development_dependency('rspec')

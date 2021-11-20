@@ -14,16 +14,8 @@ DM_DO_ADAPTERS = %w[ sqlite postgres mysql oracle sqlserver ]
 CURRENT_BRANCH = ENV.fetch('GIT_BRANCH', 'master')
 
 # DataMapper dependencies
-gem 'dm-core',         DM_VERSION, SOURCE => "#{DATAMAPPER}/dm-core#{REPO_POSTFIX}",         :branch => CURRENT_BRANCH
-gem 'dm-active_model', DM_VERSION, SOURCE => "#{DATAMAPPER}/dm-active_model#{REPO_POSTFIX}", :branch => CURRENT_BRANCH
-
-platforms :mri_18 do
-  group :quality do
-    gem 'rcov',      '~> 0.9.10'
-    gem 'yard',      '~> 0.7.2'
-    gem 'yardstick', '~> 0.4'
-  end
-end
+gem 'dm-core',         DM_VERSION, SOURCE => "#{DATAMAPPER}/dm-core#{REPO_POSTFIX}", :branch => CURRENT_BRANCH
+gem 'dm-active_model', '~> 1.3', SOURCE => "https://github.com/dxg/dm-active_model#{REPO_POSTFIX}",     :branch => "rails-6"
 
 group :datamapper do
   adapters = ENV['ADAPTER'] || ENV['ADAPTERS']
